@@ -37,3 +37,10 @@ workstation id=EAEmployeeDB.mssql.somee.com;packet size=4096;user id=kartmcad_SQ
 
 ## More articles
 For more articles visit http://www.executeautomation.com
+
+#### customisations required to get this to work with visual studio 2019 community edition
+1) Execute the following in the Package Manager Console to work around the roslyn error:
+Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+
+2) Change database connection string in web config
+ -> Integrated Security=True to user=sa;password=P@ssw0rd1;
